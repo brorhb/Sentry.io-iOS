@@ -1,0 +1,470 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EACF9076216FA4A5003AB80E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACF9075216FA4A5003AB80E /* AppDelegate.swift */; };
+		EACF9078216FA4A5003AB80E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACF9077216FA4A5003AB80E /* ViewController.swift */; };
+		EACF907B216FA4A5003AB80E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EACF9079216FA4A5003AB80E /* Main.storyboard */; };
+		EACF907D216FA4A6003AB80E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EACF907C216FA4A6003AB80E /* Assets.xcassets */; };
+		EACF9080216FA4A6003AB80E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EACF907E216FA4A6003AB80E /* LaunchScreen.storyboard */; };
+		EACF908B216FA4A6003AB80E /* Sentry_ioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACF908A216FA4A6003AB80E /* Sentry_ioTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		EACF9087216FA4A6003AB80E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EACF906A216FA4A5003AB80E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EACF9071216FA4A5003AB80E;
+			remoteInfo = Sentry.io;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EACF9072216FA4A5003AB80E /* Sentry.io.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sentry.io.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EACF9075216FA4A5003AB80E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		EACF9077216FA4A5003AB80E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		EACF907A216FA4A5003AB80E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		EACF907C216FA4A6003AB80E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		EACF907F216FA4A6003AB80E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EACF9081216FA4A6003AB80E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EACF9086216FA4A6003AB80E /* Sentry.ioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Sentry.ioTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EACF908A216FA4A6003AB80E /* Sentry_ioTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sentry_ioTests.swift; sourceTree = "<group>"; };
+		EACF908C216FA4A6003AB80E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EACF906F216FA4A5003AB80E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EACF9083216FA4A6003AB80E /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EACF9069216FA4A5003AB80E = {
+			isa = PBXGroup;
+			children = (
+				EACF9074216FA4A5003AB80E /* Sentry.io */,
+				EACF9089216FA4A6003AB80E /* Sentry.ioTests */,
+				EACF9073216FA4A5003AB80E /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EACF9073216FA4A5003AB80E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EACF9072216FA4A5003AB80E /* Sentry.io.app */,
+				EACF9086216FA4A6003AB80E /* Sentry.ioTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EACF9074216FA4A5003AB80E /* Sentry.io */ = {
+			isa = PBXGroup;
+			children = (
+				EACF9075216FA4A5003AB80E /* AppDelegate.swift */,
+				EACF9077216FA4A5003AB80E /* ViewController.swift */,
+				EACF9079216FA4A5003AB80E /* Main.storyboard */,
+				EACF907C216FA4A6003AB80E /* Assets.xcassets */,
+				EACF907E216FA4A6003AB80E /* LaunchScreen.storyboard */,
+				EACF9081216FA4A6003AB80E /* Info.plist */,
+			);
+			path = Sentry.io;
+			sourceTree = "<group>";
+		};
+		EACF9089216FA4A6003AB80E /* Sentry.ioTests */ = {
+			isa = PBXGroup;
+			children = (
+				EACF908A216FA4A6003AB80E /* Sentry_ioTests.swift */,
+				EACF908C216FA4A6003AB80E /* Info.plist */,
+			);
+			path = Sentry.ioTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EACF9071216FA4A5003AB80E /* Sentry.io */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EACF908F216FA4A6003AB80E /* Build configuration list for PBXNativeTarget "Sentry.io" */;
+			buildPhases = (
+				EACF906E216FA4A5003AB80E /* Sources */,
+				EACF906F216FA4A5003AB80E /* Frameworks */,
+				EACF9070216FA4A5003AB80E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Sentry.io;
+			productName = Sentry.io;
+			productReference = EACF9072216FA4A5003AB80E /* Sentry.io.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EACF9085216FA4A6003AB80E /* Sentry.ioTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EACF9092216FA4A6003AB80E /* Build configuration list for PBXNativeTarget "Sentry.ioTests" */;
+			buildPhases = (
+				EACF9082216FA4A6003AB80E /* Sources */,
+				EACF9083216FA4A6003AB80E /* Frameworks */,
+				EACF9084216FA4A6003AB80E /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EACF9088216FA4A6003AB80E /* PBXTargetDependency */,
+			);
+			name = Sentry.ioTests;
+			productName = Sentry.ioTests;
+			productReference = EACF9086216FA4A6003AB80E /* Sentry.ioTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EACF906A216FA4A5003AB80E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "Bror Brurberg";
+				TargetAttributes = {
+					EACF9071216FA4A5003AB80E = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					EACF9085216FA4A6003AB80E = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = EACF9071216FA4A5003AB80E;
+					};
+				};
+			};
+			buildConfigurationList = EACF906D216FA4A5003AB80E /* Build configuration list for PBXProject "Sentry.io" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EACF9069216FA4A5003AB80E;
+			productRefGroup = EACF9073216FA4A5003AB80E /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EACF9071216FA4A5003AB80E /* Sentry.io */,
+				EACF9085216FA4A6003AB80E /* Sentry.ioTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EACF9070216FA4A5003AB80E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EACF9080216FA4A6003AB80E /* LaunchScreen.storyboard in Resources */,
+				EACF907D216FA4A6003AB80E /* Assets.xcassets in Resources */,
+				EACF907B216FA4A5003AB80E /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EACF9084216FA4A6003AB80E /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EACF906E216FA4A5003AB80E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EACF9078216FA4A5003AB80E /* ViewController.swift in Sources */,
+				EACF9076216FA4A5003AB80E /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EACF9082216FA4A6003AB80E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EACF908B216FA4A6003AB80E /* Sentry_ioTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EACF9088216FA4A6003AB80E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EACF9071216FA4A5003AB80E /* Sentry.io */;
+			targetProxy = EACF9087216FA4A6003AB80E /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		EACF9079216FA4A5003AB80E /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EACF907A216FA4A5003AB80E /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		EACF907E216FA4A6003AB80E /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EACF907F216FA4A6003AB80E /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EACF908D216FA4A6003AB80E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EACF908E216FA4A6003AB80E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EACF9090216FA4A6003AB80E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MU87UPK8Q4;
+				INFOPLIST_FILE = Sentry.io/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Sentry-io";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EACF9091216FA4A6003AB80E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MU87UPK8Q4;
+				INFOPLIST_FILE = Sentry.io/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Sentry-io";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EACF9093216FA4A6003AB80E /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MU87UPK8Q4;
+				INFOPLIST_FILE = Sentry.ioTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Sentry-ioTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sentry.io.app/Sentry.io";
+			};
+			name = Debug;
+		};
+		EACF9094216FA4A6003AB80E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MU87UPK8Q4;
+				INFOPLIST_FILE = Sentry.ioTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Sentry-ioTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sentry.io.app/Sentry.io";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EACF906D216FA4A5003AB80E /* Build configuration list for PBXProject "Sentry.io" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EACF908D216FA4A6003AB80E /* Debug */,
+				EACF908E216FA4A6003AB80E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EACF908F216FA4A6003AB80E /* Build configuration list for PBXNativeTarget "Sentry.io" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EACF9090216FA4A6003AB80E /* Debug */,
+				EACF9091216FA4A6003AB80E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EACF9092216FA4A6003AB80E /* Build configuration list for PBXNativeTarget "Sentry.ioTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EACF9093216FA4A6003AB80E /* Debug */,
+				EACF9094216FA4A6003AB80E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EACF906A216FA4A5003AB80E /* Project object */;
+}
