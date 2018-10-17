@@ -1,5 +1,4 @@
 //
-//  JSONParser.swift
 //  Sentry.io
 //
 //  Created by Bror Brurberg on 15/10/2018.

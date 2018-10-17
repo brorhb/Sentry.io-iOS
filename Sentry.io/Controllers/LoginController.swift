@@ -18,7 +18,7 @@ class LoginController: UIViewController {
         HTTPHandler.getProjectsJSON(token: token, completionHandler: validateUser)
     }
     
-    func validateUser (data: Data?) -> Void {
+    func validateUser (_ data: Data?) -> Void {
         let alert: UIAlertController = UIAlertController(title: "Error", message: "Invalid token", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
         if data != nil{

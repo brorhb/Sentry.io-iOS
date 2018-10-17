@@ -20,7 +20,7 @@ class MainController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if let cachedProjects = UserDefaults.standard.data(forKey: "projects") {
-            parseProjectsData(projects: cachedProjects)
+            parseProjectsData(cachedProjects)
         } else {
             if let token = UserDefaults.standard.string(forKey: "token") {
                 HTTPHandler.getProjectsJSON(token: token, completionHandler: parseProjectsData)
@@ -28,9 +28,9 @@ class MainController: UITableViewController {
         }
     }
     
-    func parseProjectsData (projects: Data?) {
+    func parseProjectsData (_ projects: Data?) {
         if let data = projects {
-            self.projects = ProjectsDataProcessor.mapJSONToProjects(data: data)!
+            self.projects = JSONParser.parse(data: data)!
             DispatchQueue.main.async {
                 // self.projectsTableView.reload()
             }
