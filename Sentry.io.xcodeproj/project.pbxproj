@@ -7,15 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA24FC852178AD06001402F3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA24FC842178AD06001402F3 /* LoginViewController.swift */; };
+		EA24FC8A2178CAEC001402F3 /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA24FC892178CAEC001402F3 /* ProjectsViewController.swift */; };
 		EA6CCBFD2174C1B100272F37 /* Switcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6CCBFC2174C1B100272F37 /* Switcher.swift */; };
-		EA6CCBFF2174E71200272F37 /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6CCBFE2174E71200272F37 /* MainNavigationController.swift */; };
 		EACF9076216FA4A5003AB80E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACF9075216FA4A5003AB80E /* AppDelegate.swift */; };
-		EACF9078216FA4A5003AB80E /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACF9077216FA4A5003AB80E /* MainController.swift */; };
-		EACF907B216FA4A5003AB80E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EACF9079216FA4A5003AB80E /* Main.storyboard */; };
 		EACF907D216FA4A6003AB80E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EACF907C216FA4A6003AB80E /* Assets.xcassets */; };
 		EACF9080216FA4A6003AB80E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EACF907E216FA4A6003AB80E /* LaunchScreen.storyboard */; };
 		EACF908B216FA4A6003AB80E /* Sentry_ioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACF908A216FA4A6003AB80E /* Sentry_ioTests.swift */; };
-		EACF9096216FA770003AB80E /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACF9095216FA770003AB80E /* LoginController.swift */; };
 		EAEEB8CD2174EF8A003BC4EF /* HTTPHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEEB8CC2174EF8A003BC4EF /* HTTPHandler.swift */; };
 		EAEEB8CF217766C4003BC4EF /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEEB8CE217766C4003BC4EF /* Project.swift */; };
 		EAEEB8D32177B646003BC4EF /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAEEB8D22177B646003BC4EF /* JSONParser.swift */; };
@@ -32,19 +30,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EA24FC842178AD06001402F3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		EA24FC892178CAEC001402F3 /* ProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsViewController.swift; sourceTree = "<group>"; };
 		EA6CCBFC2174C1B100272F37 /* Switcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Switcher.swift; sourceTree = "<group>"; };
-		EA6CCBFE2174E71200272F37 /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
 		EACF9072216FA4A5003AB80E /* Sentry.io.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sentry.io.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EACF9075216FA4A5003AB80E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		EACF9077216FA4A5003AB80E /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
-		EACF907A216FA4A5003AB80E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		EACF907C216FA4A6003AB80E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EACF907F216FA4A6003AB80E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		EACF9081216FA4A6003AB80E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EACF9086216FA4A6003AB80E /* Sentry.ioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Sentry.ioTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EACF908A216FA4A6003AB80E /* Sentry_ioTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sentry_ioTests.swift; sourceTree = "<group>"; };
 		EACF908C216FA4A6003AB80E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EACF9095216FA770003AB80E /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
 		EAEEB8CC2174EF8A003BC4EF /* HTTPHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPHandler.swift; sourceTree = "<group>"; };
 		EAEEB8CE217766C4003BC4EF /* Project.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project.swift; sourceTree = "<group>"; };
 		EAEEB8D22177B646003BC4EF /* JSONParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
@@ -68,14 +64,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		EA6CCBFA2174BF8100272F37 /* Controllers */ = {
+		EA24FC832178ACB5001402F3 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
-				EACF9077216FA4A5003AB80E /* MainController.swift */,
-				EACF9095216FA770003AB80E /* LoginController.swift */,
-				EA6CCBFE2174E71200272F37 /* MainNavigationController.swift */,
+				EA24FC842178AD06001402F3 /* LoginViewController.swift */,
+				EA24FC892178CAEC001402F3 /* ProjectsViewController.swift */,
 			);
-			path = Controllers;
+			path = Screens;
 			sourceTree = "<group>";
 		};
 		EA6CCBFB2174C19700272F37 /* Classes */ = {
@@ -108,9 +103,8 @@
 			isa = PBXGroup;
 			children = (
 				EACF9075216FA4A5003AB80E /* AppDelegate.swift */,
+				EA24FC832178ACB5001402F3 /* Screens */,
 				EAEEB8CB2174EE8E003BC4EF /* Tools */,
-				EA6CCBFA2174BF8100272F37 /* Controllers */,
-				EACF9079216FA4A5003AB80E /* Main.storyboard */,
 				EACF907C216FA4A6003AB80E /* Assets.xcassets */,
 				EA6CCBFB2174C19700272F37 /* Classes */,
 				EACF907E216FA4A6003AB80E /* LaunchScreen.storyboard */,
@@ -221,7 +215,6 @@
 			files = (
 				EACF9080216FA4A6003AB80E /* LaunchScreen.storyboard in Resources */,
 				EACF907D216FA4A6003AB80E /* Assets.xcassets in Resources */,
-				EACF907B216FA4A5003AB80E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,14 +232,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EA6CCBFF2174E71200272F37 /* MainNavigationController.swift in Sources */,
-				EACF9078216FA4A5003AB80E /* MainController.swift in Sources */,
+				EA24FC852178AD06001402F3 /* LoginViewController.swift in Sources */,
 				EAEEB8CD2174EF8A003BC4EF /* HTTPHandler.swift in Sources */,
 				EACF9076216FA4A5003AB80E /* AppDelegate.swift in Sources */,
 				EAEEB8D32177B646003BC4EF /* JSONParser.swift in Sources */,
+				EA24FC8A2178CAEC001402F3 /* ProjectsViewController.swift in Sources */,
 				EA6CCBFD2174C1B100272F37 /* Switcher.swift in Sources */,
 				EAEEB8CF217766C4003BC4EF /* Project.swift in Sources */,
-				EACF9096216FA770003AB80E /* LoginController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,14 +261,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		EACF9079216FA4A5003AB80E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				EACF907A216FA4A5003AB80E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		EACF907E216FA4A6003AB80E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

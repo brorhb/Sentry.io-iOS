@@ -1,24 +1,23 @@
 //
-//  ViewController.swift
+//  ProjectsViewController.swift
 //  Sentry.io
 //
-//  Created by Bror Brurberg on 11/10/2018.
+//  Created by Bror Brurberg on 18/10/2018.
 //  Copyright © 2018 Bror Brurberg. All rights reserved.
 //
 
 import UIKit
 
-class MainController: UITableViewController {
+class ProjectsViewController: UITableViewController {
     
+    let logoutButton: UIBarButtonItem = UIBarButtonItem()
     var projects: [Project] = []
-    
-    @IBAction func logOutButton(_ sender: UIBarButtonItem) {
-        UserDefaults.standard.set(false, forKey: "status")
-        Switcher.updateRootViewController()
-    }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .white
+        setupLogoutButton()
+        
         if let cachedProjects = UserDefaults.standard.data(forKey: "projects") {
             parseProjectsData(cachedProjects)
         } else {
@@ -36,6 +35,17 @@ class MainController: UITableViewController {
             }
         }
     }
+    
+    @objc func logoutButtonOnClick() {
+        UserDefaults.standard.set(false, forKey: "loginStatus")
+        Switcher.updateRootViewController()
+    }
+    
+    func setupLogoutButton() {
+        logoutButton.title = "Log out"
+        logoutButton.target = self
+        logoutButton.action = #selector(logoutButtonOnClick)
+        self.navigationItem.rightBarButtonItem = logoutButton
+    }
 
 }
-

@@ -10,14 +10,19 @@ import UIKit
 
 class Switcher {
     static func updateRootViewController () {
-        let status = UserDefaults.standard.bool(forKey: "status")
+        let loginStatus = UserDefaults.standard.bool(forKey: "loginStatus")
+        let loginViewController = LoginViewController()
+        let projectsViewController = ProjectsViewController()
+        projectsViewController.title = "Projects"
+        let navigationController = UINavigationController(rootViewController: projectsViewController)
         var rootViewController: UIViewController
-        if status == true {
-            rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MainNavigationController") as! MainNavigationController
+        if loginStatus == true {
+            rootViewController = navigationController
         } else {
-            rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "loginViewController") as! LoginController
+            rootViewController = loginViewController
         }
         let appDelegate: AppDelegate = UIApplication.shared.delegate as! AppDelegate
         appDelegate.window?.rootViewController = rootViewController
+        appDelegate.window?.makeKeyAndVisible()
     }
 }
