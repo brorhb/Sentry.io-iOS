@@ -8,7 +8,9 @@
 
 import UIKit
 
-class ProjectsViewController: UIViewController, UITableViewDataSource {
+class ProjectsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    let red = UIColor(red:1.00, green:0.25, blue:0.21, alpha:1.0)
     
     
     let logoutButton: UIBarButtonItem = UIBarButtonItem()
@@ -19,9 +21,13 @@ class ProjectsViewController: UIViewController, UITableViewDataSource {
         return projects.count
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "projectCell", for: indexPath)
-        cell.textLabel?.text = projects[indexPath.row].name
+        let cell = tableView.dequeueReusableCell(withIdentifier: "projectCell", for: indexPath) as! ProjectTableViewCell
+        cell.project = projects[indexPath.row]
         return cell
     }
     
@@ -29,7 +35,7 @@ class ProjectsViewController: UIViewController, UITableViewDataSource {
         super.viewDidLoad()
         self.navigationController?.navigationItem.largeTitleDisplayMode = .always
         self.navigationController?.navigationBar.prefersLargeTitles = true
-        projectsTableView.register(UITableViewCell.self, forCellReuseIdentifier: "projectCell")
+        projectsTableView.register(ProjectTableViewCell.self, forCellReuseIdentifier: "projectCell")
         view.backgroundColor = .white
         setupProjectsTableView()
         setupLogoutButton()

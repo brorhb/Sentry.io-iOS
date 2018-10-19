@@ -9,13 +9,13 @@
 import Foundation
 
 struct Project: Decodable {
-    let id: String
-    let name: String
-    let status: String
-    let isBookmarked: Bool
+    let id: String?
+    let name: String?
+    let status: String?
+    let isBookmarked: Bool?
     let platform: String?
-    let color: String
-    let slug: String
+    let color: String?
+    let slug: String?
     
     /*init(id: String, name: String, status: String, isBookmarked: Bool, platform: String?, color: String) {
         self.id = id
