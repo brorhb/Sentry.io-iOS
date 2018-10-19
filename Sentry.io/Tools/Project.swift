@@ -15,6 +15,7 @@ struct Project: Decodable {
     let isBookmarked: Bool
     let platform: String?
     let color: String
+    let slug: String
     
     /*init(id: String, name: String, status: String, isBookmarked: Bool, platform: String?, color: String) {
         self.id = id
@@ -32,5 +33,6 @@ struct Project: Decodable {
         case isBookmarked = "isBookmarked"
         case platform = "platform"
         case color = "color"
+        case slug = "slug"
     }
 }

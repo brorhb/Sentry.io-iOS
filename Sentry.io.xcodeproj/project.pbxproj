@@ -10,6 +10,7 @@
 		EA24FC852178AD06001402F3 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA24FC842178AD06001402F3 /* LoginViewController.swift */; };
 		EA24FC8A2178CAEC001402F3 /* ProjectsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA24FC892178CAEC001402F3 /* ProjectsViewController.swift */; };
 		EA6CCBFD2174C1B100272F37 /* Switcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA6CCBFC2174C1B100272F37 /* Switcher.swift */; };
+		EA8B079A2178D41700DB02D8 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA8B07992178D41700DB02D8 /* CustomTableViewCell.swift */; };
 		EACF9076216FA4A5003AB80E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EACF9075216FA4A5003AB80E /* AppDelegate.swift */; };
 		EACF907D216FA4A6003AB80E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EACF907C216FA4A6003AB80E /* Assets.xcassets */; };
 		EACF9080216FA4A6003AB80E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EACF907E216FA4A6003AB80E /* LaunchScreen.storyboard */; };
@@ -33,6 +34,7 @@
 		EA24FC842178AD06001402F3 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		EA24FC892178CAEC001402F3 /* ProjectsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectsViewController.swift; sourceTree = "<group>"; };
 		EA6CCBFC2174C1B100272F37 /* Switcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Switcher.swift; sourceTree = "<group>"; };
+		EA8B07992178D41700DB02D8 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		EACF9072216FA4A5003AB80E /* Sentry.io.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sentry.io.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EACF9075216FA4A5003AB80E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EACF907C216FA4A6003AB80E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -81,6 +83,14 @@
 			path = Classes;
 			sourceTree = "<group>";
 		};
+		EA8B07982178D3F500DB02D8 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				EA8B07992178D41700DB02D8 /* CustomTableViewCell.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		EACF9069216FA4A5003AB80E = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				EACF9075216FA4A5003AB80E /* AppDelegate.swift */,
+				EA8B07982178D3F500DB02D8 /* Components */,
 				EA24FC832178ACB5001402F3 /* Screens */,
 				EAEEB8CB2174EE8E003BC4EF /* Tools */,
 				EACF907C216FA4A6003AB80E /* Assets.xcassets */,
@@ -234,6 +245,7 @@
 			files = (
 				EA24FC852178AD06001402F3 /* LoginViewController.swift in Sources */,
 				EAEEB8CD2174EF8A003BC4EF /* HTTPHandler.swift in Sources */,
+				EA8B079A2178D41700DB02D8 /* CustomTableViewCell.swift in Sources */,
 				EACF9076216FA4A5003AB80E /* AppDelegate.swift in Sources */,
 				EAEEB8D32177B646003BC4EF /* JSONParser.swift in Sources */,
 				EA24FC8A2178CAEC001402F3 /* ProjectsViewController.swift in Sources */,
