@@ -19,11 +19,13 @@ class JSONParser {
     }
     
     static func parseIssues(data: Data) -> [Issue]? {
-        guard let issue = try? JSONDecoder().decode([Issue].self, from: data) else {
-            print("Could not map JSON to issues")
+        do {
+            let issue = try JSONDecoder().decode([Issue].self, from: data)
+            print("issues", issue)
+            return issue
+        } catch let err {
+            print("Error Decoding JSON: \(err)")
             return nil
         }
-        print("issues", issue)
-        return issue
     }
 }

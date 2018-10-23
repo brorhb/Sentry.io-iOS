@@ -11,4 +11,9 @@ import Foundation
 struct Tags: Decodable {
     let value: String?
     let key: String?
+    
+    private enum CodingKeys: String, CodingKey {
+        case value = "value"
+        case key = "key"
+    }
 }

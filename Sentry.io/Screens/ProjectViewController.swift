@@ -25,7 +25,7 @@ class ProjectViewController: UITableViewController {
         
         if let key = name {
             if let cachedIssues = UserDefaults.standard.data(forKey: key) {
-                //parseIssueData(cachedIssues)
+                parseIssuesData(cachedIssues)
             } else {
                 if let token = UserDefaults.standard.string(forKey: "token") {
                     HTTPHandler.getIssuesJSON(token: token, orgSlug: orgSlug!, projectSlug: projectSlug!, completionHandler: parseIssuesData)
@@ -38,7 +38,7 @@ class ProjectViewController: UITableViewController {
         if let data = issues {
             self.issues = JSONParser.parseIssues(data: data)!
             DispatchQueue.main.async {
-                //self.projectsTableView.reloadData()
+                self.tableView.reloadData()
             }
         }
     }
