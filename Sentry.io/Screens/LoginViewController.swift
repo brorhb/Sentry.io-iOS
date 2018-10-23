@@ -72,9 +72,7 @@ class LoginViewController: UIViewController {
         loginButton.backgroundColor = red
         loginButton.setTitle("Login", for: .normal)
         loginButton.setTitleColor(.white, for: .normal)
-        
         loginButton.addTarget(self, action: #selector(loginOnCLick), for: .touchUpInside)
-        
         view.addSubview(loginButton)
         setupLoginButtonConstraints()
     }

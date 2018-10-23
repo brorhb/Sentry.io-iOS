@@ -16,15 +16,7 @@ struct Project: Decodable {
     let platform: String?
     let color: String?
     let slug: String?
-    
-    /*init(id: String, name: String, status: String, isBookmarked: Bool, platform: String?, color: String) {
-        self.id = id
-        self.name = name
-        self.status = status
-        self.isBookmarked = isBookmarked
-        self.platform = platform
-        self.color = color
-    }*/
+    let organization: Organization?
     
     private enum CodingKeys: String, CodingKey {
         case id = "id"
@@ -34,5 +26,6 @@ struct Project: Decodable {
         case platform = "platform"
         case color = "color"
         case slug = "slug"
+        case organization = "organization"
     }
 }

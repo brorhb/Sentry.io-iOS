@@ -8,36 +8,45 @@
 
 import UIKit
 
-class ProjectsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class ProjectsViewController: UITableViewController {
     
     let red = UIColor(red:1.00, green:0.25, blue:0.21, alpha:1.0)
     
     
     let logoutButton: UIBarButtonItem = UIBarButtonItem()
     var projects: [Project] = []
-    let projectsTableView = UITableView()
     
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return projects.count
     }
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableView.automaticDimension
     }
     
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "projectCell", for: indexPath) as! ProjectTableViewCell
         cell.project = projects[indexPath.row]
         return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let nextScreen = ProjectViewController()
+        nextScreen.name = projects[indexPath.row].name
+        nextScreen.id = projects[indexPath.row].id
+        nextScreen.title = projects[indexPath.row].name
+        nextScreen.projectSlug = projects[indexPath.row].slug
+        nextScreen.orgSlug = projects[indexPath.row].organization?.slug
+        navigationController?.pushViewController(nextScreen, animated: true)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationItem.largeTitleDisplayMode = .always
         self.navigationController?.navigationBar.prefersLargeTitles = true
-        projectsTableView.register(ProjectTableViewCell.self, forCellReuseIdentifier: "projectCell")
+        tableView.register(ProjectTableViewCell.self, forCellReuseIdentifier: "projectCell")
         view.backgroundColor = .white
-        setupProjectsTableView()
         setupLogoutButton()
         if let cachedProjects = UserDefaults.standard.data(forKey: "projects") {
             parseProjectsData(cachedProjects)
@@ -50,7 +59,7 @@ class ProjectsViewController: UIViewController, UITableViewDataSource, UITableVi
     
     func parseProjectsData (_ projects: Data?) {
         if let data = projects {
-            self.projects = JSONParser.parse(data: data)!
+            self.projects = JSONParser.parseProjects(data: data)!
             DispatchQueue.main.async {
                 //self.projectsTableView.reloadData()
             }
@@ -67,20 +76,6 @@ class ProjectsViewController: UIViewController, UITableViewDataSource, UITableVi
         logoutButton.target = self
         logoutButton.action = #selector(logoutButtonOnClick)
         self.navigationItem.rightBarButtonItem = logoutButton
-    }
-    
-    func setupProjectsTableView () {
-        projectsTableView.dataSource = self
-        self.view.addSubview(projectsTableView)
-        setupProjectsTableViewConstraints()
-    }
-    
-    func setupProjectsTableViewConstraints () {
-        projectsTableView.translatesAutoresizingMaskIntoConstraints = false
-        projectsTableView.leftAnchor.constraint(equalTo: self.view.leftAnchor).isActive = true
-        projectsTableView.rightAnchor.constraint(equalTo: self.view.rightAnchor).isActive = true
-        projectsTableView.topAnchor.constraint(equalTo: self.view.topAnchor).isActive = true
-        projectsTableView.bottomAnchor.constraint(equalTo: self.view.bottomAnchor).isActive = true
     }
 
 }
