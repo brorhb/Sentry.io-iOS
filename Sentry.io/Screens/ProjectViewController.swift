@@ -15,6 +15,8 @@ class ProjectViewController: UITableViewController {
     var orgSlug: String?
     var projectSlug: String?
     
+    let red = UIColor(red:1.00, green:0.25, blue:0.21, alpha:1.0)
+    
     var issues: [Issue] = []
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -45,23 +47,36 @@ class ProjectViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.navigationController?.navigationItem.largeTitleDisplayMode = .always
+        self.navigationController?.navigationItem.largeTitleDisplayMode = .automatic
         self.navigationController?.navigationBar.prefersLargeTitles = true
         view.backgroundColor = .white
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
+        tableView.addSubview(refreshControl)
         tableView.register(IssueTableViewCell.self, forCellReuseIdentifier: "issueCell")
         if let key = name {
             if let cachedIssues = UserDefaults.standard.data(forKey: key) {
                 parseIssuesData(cachedIssues)
             } else {
-                if let token = UserDefaults.standard.string(forKey: "token") {
-                    HTTPHandler.getIssuesJSON(token: token, orgSlug: orgSlug!, projectSlug: projectSlug!, completionHandler: parseIssuesData)
-                }
+                fetchIssues()
             }
         }
     }
     
+    @objc func refresh(_ refreshControl: UIRefreshControl) {
+        print("refreshing")
+        fetchIssues()
+        refreshControl.endRefreshing()
+    }
+    
+    func fetchIssues () {
+        if let token = UserDefaults.standard.string(forKey: "token") {
+            HTTPHandler.getIssuesJSON(token: token, orgSlug: orgSlug!, projectSlug: projectSlug!, completionHandler: parseIssuesData)
+        }
+    }
+    
     func parseIssuesData (_ issues: Data?) {
-        if UserDefaults.standard.data(forKey: name!) == nil {
+        if UserDefaults.standard.data(forKey: name!) == nil || UserDefaults.standard.data(forKey: name!) != issues  {
             UserDefaults.standard.set(issues, forKey: name!)
         }
         if let data = issues {

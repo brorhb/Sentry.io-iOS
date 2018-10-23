@@ -10,6 +10,9 @@ import UIKit
 
 class IssueTableViewCell: UITableViewCell {
     
+    let gold = UIColor(red:1.00, green:0.72, blue:0.00, alpha:1.0)
+    let red = UIColor(red:1.00, green:0.25, blue:0.21, alpha:1.0)
+    
     let platformLabel:UILabel = {
         let label = UILabel()
         label.font = UIFont.boldSystemFont(ofSize: 20)
@@ -49,6 +52,8 @@ class IssueTableViewCell: UITableViewCell {
             }
             if let type = issueItem.type {
                 typeLabel.text = type
+                if type == "error" {typeLabel.textColor = gold}
+                if type == "fatal" {typeLabel.textColor = red}
             }
         }
     }

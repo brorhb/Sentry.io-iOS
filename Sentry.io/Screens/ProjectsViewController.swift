@@ -12,7 +12,6 @@ class ProjectsViewController: UITableViewController {
     
     let red = UIColor(red:1.00, green:0.25, blue:0.21, alpha:1.0)
     
-    
     let logoutButton: UIBarButtonItem = UIBarButtonItem()
     var projects: [Project] = []
     
@@ -45,6 +44,10 @@ class ProjectsViewController: UITableViewController {
         super.viewDidLoad()
         self.navigationController?.navigationItem.largeTitleDisplayMode = .always
         self.navigationController?.navigationBar.prefersLargeTitles = true
+        let refreshControl = UIRefreshControl()
+        refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
+        tableView.addSubview(refreshControl)
         tableView.register(ProjectTableViewCell.self, forCellReuseIdentifier: "projectCell")
         view.backgroundColor = .white
         setupLogoutButton()
@@ -55,6 +58,11 @@ class ProjectsViewController: UITableViewController {
                 HTTPHandler.getProjectsJSON(token: token, completionHandler: parseProjectsData)
             }
         }
+    }
+    
+    @objc func refresh(_ refreshControl:UIRefreshControl) {
+        print("refreshing")
+        refreshControl.endRefreshing()
     }
     
     func parseProjectsData (_ projects: Data?) {
