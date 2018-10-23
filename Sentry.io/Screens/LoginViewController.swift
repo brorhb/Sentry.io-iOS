@@ -83,34 +83,34 @@ class LoginViewController: UIViewController {
     // UI Constraints
     func setupTokenInputFieldConstraints () {
         tokenInputField.translatesAutoresizingMaskIntoConstraints = false
-        tokenInputField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
-        tokenInputField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20).isActive = true
+        tokenInputField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50).isActive = true
+        tokenInputField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50).isActive = true
         tokenInputField.heightAnchor.constraint(equalToConstant: 20).isActive = true
-        tokenInputField.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -200).isActive = true
+        tokenInputField.topAnchor.constraint(equalTo: welcomeLabel.bottomAnchor, constant: 20).isActive = true
     }
     
     func setupWelcomeLabelConstraints () {
         welcomeLabel.translatesAutoresizingMaskIntoConstraints = false
-        welcomeLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
-        welcomeLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20).isActive = true
+        welcomeLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50).isActive = true
+        welcomeLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50).isActive = true
         welcomeLabel.heightAnchor.constraint(equalToConstant: 30).isActive = true
-        welcomeLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: -250).isActive = true
+        welcomeLabel.topAnchor.constraint(equalTo: view.topAnchor, constant: 150).isActive = true
     }
     
     func setupErrorLabelConstraints () {
         errorLabel.translatesAutoresizingMaskIntoConstraints = false
-        errorLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
-        errorLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20).isActive = true
+        errorLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50).isActive = true
+        errorLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50).isActive = true
         errorLabel.heightAnchor.constraint(equalToConstant: 30).isActive = true
-        errorLabel.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 50).isActive = true
+        errorLabel.topAnchor.constraint(equalTo: tokenInputField.bottomAnchor, constant: 20)
     }
     
     func setupLoginButtonConstraints () {
         loginButton.translatesAutoresizingMaskIntoConstraints = false
-        loginButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20).isActive = true
-        loginButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -20).isActive = true
+        loginButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50).isActive = true
+        loginButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50).isActive = true
         loginButton.heightAnchor.constraint(equalToConstant: 50).isActive = true
-        loginButton.centerYAnchor.constraint(equalTo: view.centerYAnchor, constant: 0).isActive = true
+        loginButton.topAnchor.constraint(equalTo: tokenInputField.bottomAnchor, constant: 80).isActive = true
     }
 
 }
