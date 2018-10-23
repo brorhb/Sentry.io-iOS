@@ -1,5 +1,5 @@
 //
-//  MetaData.swift
+//  Context.swift
 //  Sentry.io
 //
 //  Created by Bror Hammer Brurberg on 23/10/2018.
@@ -8,12 +8,12 @@
 
 import Foundation
 
-struct MetaData: Decodable {
-    let type: String?
-    let value: String?
+struct Contexts: Decodable {
+    let os: OS?
+    let browser: Browser?
     
     private enum CodingKeys: String, CodingKey {
-        case type = "type"
-        case value = "value"
+        case os = "os"
+        case browser = "browser"
     }
 }

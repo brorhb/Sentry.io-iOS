@@ -12,4 +12,10 @@ struct Browser: Decodable {
     let version: String?
     let type: String?
     let name: String?
+    
+    private enum CodingKeys: String, CodingKey {
+        case version = "version"
+        case type = "type"
+        case name = "name"
+    }
 }

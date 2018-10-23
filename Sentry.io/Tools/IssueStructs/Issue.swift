@@ -11,5 +11,23 @@ import Foundation
 struct Issue: Decodable {
     let eventID: String?
     let tags: [Tags]?
-    let context: Contexts
+    let contexts: Contexts?
+    let dateReceived: String?
+    let dateCreated: String?
+    let metaData: MetaData?
+    let platform: String?
+    let message: String?
+    let type: String?
+    
+    private enum CodingKeys: String, CodingKey {
+        case eventID = "eventID"
+        case tags = "tags"
+        case contexts = "contexts"
+        case dateReceived = "dateReceived"
+        case dateCreated = "dateCreated"
+        case metaData = "metadata"
+        case platform = "platform"
+        case message = "message"
+        case type = "type"
+    }
 }
