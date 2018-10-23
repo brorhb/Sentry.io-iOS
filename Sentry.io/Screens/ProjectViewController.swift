@@ -17,12 +17,38 @@ class ProjectViewController: UITableViewController {
     
     var issues: [Issue] = []
     
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return issues.count
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableView.automaticDimension
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "issueCell", for: indexPath) as! IssueTableViewCell
+        cell.issue = issues[indexPath.row]
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        print("View issue")
+//        let nextScreen = ProjectViewController()
+//        nextScreen.name = projects[indexPath.row].name
+//        nextScreen.id = projects[indexPath.row].id
+//        nextScreen.title = projects[indexPath.row].name
+//        nextScreen.projectSlug = projects[indexPath.row].slug
+//        nextScreen.orgSlug = projects[indexPath.row].organization?.slug
+//        navigationController?.pushViewController(nextScreen, animated: true)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.navigationController?.navigationItem.largeTitleDisplayMode = .always
         self.navigationController?.navigationBar.prefersLargeTitles = true
         view.backgroundColor = .white
-        
+        tableView.register(IssueTableViewCell.self, forCellReuseIdentifier: "issueCell")
         if let key = name {
             if let cachedIssues = UserDefaults.standard.data(forKey: key) {
                 parseIssuesData(cachedIssues)
@@ -35,6 +61,9 @@ class ProjectViewController: UITableViewController {
     }
     
     func parseIssuesData (_ issues: Data?) {
+        if UserDefaults.standard.data(forKey: name!) == nil {
+            UserDefaults.standard.set(issues, forKey: name!)
+        }
         if let data = issues {
             self.issues = JSONParser.parseIssues(data: data)!
             DispatchQueue.main.async {
