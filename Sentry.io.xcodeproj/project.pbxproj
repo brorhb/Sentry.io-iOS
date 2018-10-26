@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		324BFF70217F782300787D1C /* IssueTabelViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324BFF6F217F782300787D1C /* IssueTabelViewCell.swift */; };
+		327CE213218077C5005562F4 /* IssueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327CE212218077C5005562F4 /* IssueViewController.swift */; };
 		3295009F217F57DE007728E4 /* Browser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3295009A217F57DE007728E4 /* Browser.swift */; };
 		329500A0217F57DE007728E4 /* OS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3295009B217F57DE007728E4 /* OS.swift */; };
 		329500A1217F57DE007728E4 /* Contexts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3295009C217F57DE007728E4 /* Contexts.swift */; };
@@ -41,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		324BFF6F217F782300787D1C /* IssueTabelViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueTabelViewCell.swift; sourceTree = "<group>"; };
+		327CE212218077C5005562F4 /* IssueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueViewController.swift; sourceTree = "<group>"; };
 		3295009A217F57DE007728E4 /* Browser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Browser.swift; path = ../../../../../../.Trash/Browser.swift; sourceTree = "<group>"; };
 		3295009B217F57DE007728E4 /* OS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OS.swift; path = ../../../../../../.Trash/OS.swift; sourceTree = "<group>"; };
 		3295009C217F57DE007728E4 /* Contexts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Contexts.swift; path = ../../../../../../.Trash/Contexts.swift; sourceTree = "<group>"; };
@@ -103,6 +105,7 @@
 				EA24FC842178AD06001402F3 /* LoginViewController.swift */,
 				EA24FC892178CAEC001402F3 /* ProjectsViewController.swift */,
 				32AE0344217F2BF7007FBC96 /* ProjectViewController.swift */,
+				327CE212218077C5005562F4 /* IssueViewController.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -281,6 +284,7 @@
 				EA24FC852178AD06001402F3 /* LoginViewController.swift in Sources */,
 				32AE0349217F3DF5007FBC96 /* Issue.swift in Sources */,
 				EAEEB8CD2174EF8A003BC4EF /* HTTPHandler.swift in Sources */,
+				327CE213218077C5005562F4 /* IssueViewController.swift in Sources */,
 				32AE0345217F2BF7007FBC96 /* ProjectViewController.swift in Sources */,
 				329500A3217F57DE007728E4 /* Tags.swift in Sources */,
 				EA8B079A2178D41700DB02D8 /* ProjectTableViewCell.swift in Sources */,

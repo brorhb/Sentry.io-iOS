@@ -35,14 +35,10 @@ class ProjectViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        print("View issue")
-//        let nextScreen = ProjectViewController()
-//        nextScreen.name = projects[indexPath.row].name
-//        nextScreen.id = projects[indexPath.row].id
-//        nextScreen.title = projects[indexPath.row].name
-//        nextScreen.projectSlug = projects[indexPath.row].slug
-//        nextScreen.orgSlug = projects[indexPath.row].organization?.slug
-//        navigationController?.pushViewController(nextScreen, animated: true)
+        let nextScreen = IssueViewController(collectionViewLayout: UICollectionViewFlowLayout())
+        nextScreen.issue = issues[indexPath.row]
+        nextScreen.title = issues[indexPath.row].eventID
+        navigationController?.pushViewController(nextScreen, animated: true)
     }
     
     override func viewDidLoad() {
