@@ -10,7 +10,13 @@ import UIKit
 
 private let reuseIdentifier = "Cell"
 
-class IssueViewController: UICollectionViewController {
+class IssueViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+    
+    let collectionView: UICollectionView = {
+        let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout())
+        collectionView.translatesAutoresizingMaskIntoConstraints = false
+        return collectionView
+    }()
     
     var issue: Issue? {
         didSet {
@@ -32,20 +38,23 @@ class IssueViewController: UICollectionViewController {
         }
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        collectionView?.register(UICollectionViewCell.self, forCellWithReuseIdentifier: "cellID")
-        collectionView.backgroundColor = .white
-        print(issue as Any)
-    }
-    
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 5
     }
-
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cellID", for: indexPath)
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "issueValue", for: indexPath) as! IssueItemCollectionViewCell
+        cell.name.text = "Hello"
         return cell
+    }
+    
+    override func loadView() {
+        super.loadView()
+        collectionView.register(IssueItemCollectionViewCell.self, forCellWithReuseIdentifier: "issueValue")
+    }
+    
+    override func viewDidLoad() {
+        print("Hello world")
     }
     
 }

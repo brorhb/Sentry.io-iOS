@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		324BFF70217F782300787D1C /* IssueTabelViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 324BFF6F217F782300787D1C /* IssueTabelViewCell.swift */; };
+		3269C1292182E63300BA3AEA /* IssueItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3269C1282182E63300BA3AEA /* IssueItemCollectionViewCell.swift */; };
 		327CE213218077C5005562F4 /* IssueViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 327CE212218077C5005562F4 /* IssueViewController.swift */; };
 		3295009F217F57DE007728E4 /* Browser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3295009A217F57DE007728E4 /* Browser.swift */; };
 		329500A0217F57DE007728E4 /* OS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3295009B217F57DE007728E4 /* OS.swift */; };
@@ -42,6 +43,7 @@
 
 /* Begin PBXFileReference section */
 		324BFF6F217F782300787D1C /* IssueTabelViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueTabelViewCell.swift; sourceTree = "<group>"; };
+		3269C1282182E63300BA3AEA /* IssueItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		327CE212218077C5005562F4 /* IssueViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IssueViewController.swift; sourceTree = "<group>"; };
 		3295009A217F57DE007728E4 /* Browser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Browser.swift; path = ../../../../../../.Trash/Browser.swift; sourceTree = "<group>"; };
 		3295009B217F57DE007728E4 /* OS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = OS.swift; path = ../../../../../../.Trash/OS.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 			children = (
 				EA8B07992178D41700DB02D8 /* ProjectTableViewCell.swift */,
 				324BFF6F217F782300787D1C /* IssueTabelViewCell.swift */,
+				3269C1282182E63300BA3AEA /* IssueItemCollectionViewCell.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -285,6 +288,7 @@
 				32AE0349217F3DF5007FBC96 /* Issue.swift in Sources */,
 				EAEEB8CD2174EF8A003BC4EF /* HTTPHandler.swift in Sources */,
 				327CE213218077C5005562F4 /* IssueViewController.swift in Sources */,
+				3269C1292182E63300BA3AEA /* IssueItemCollectionViewCell.swift in Sources */,
 				32AE0345217F2BF7007FBC96 /* ProjectViewController.swift in Sources */,
 				329500A3217F57DE007728E4 /* Tags.swift in Sources */,
 				EA8B079A2178D41700DB02D8 /* ProjectTableViewCell.swift in Sources */,
