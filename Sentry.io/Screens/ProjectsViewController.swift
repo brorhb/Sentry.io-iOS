@@ -14,9 +14,29 @@ class ProjectsViewController: UITableViewController {
     
     let logoutButton: UIBarButtonItem = UIBarButtonItem()
     var projects: [Project] = []
+    var bookmarks: [Project] = []
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if section == 0 {
+            return projects.filter() {
+                if let bookmarked = ($0 as Project).isBookmarked {
+                    return bookmarked
+                } else { return false }
+            }.count
+        }
         return projects.count
+    }
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section == 0 {
+            return "Bookmarked Projects"
+        } else {
+            return "Others"
+        }
     }
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -25,8 +45,14 @@ class ProjectsViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "projectCell", for: indexPath) as! ProjectTableViewCell
+        let bookmarkedCell = tableView.dequeueReusableCell(withIdentifier: "projectCell", for: indexPath) as! ProjectTableViewCell
         cell.project = projects[indexPath.row]
-        return cell
+        if indexPath.section == 0 {
+            bookmarkedCell.project = bookmarks[indexPath.row]
+            return bookmarkedCell
+        } else {
+            return cell
+        }
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -72,6 +98,11 @@ class ProjectsViewController: UITableViewController {
     func parseProjectsData (_ projects: Data?) {
         if let data = projects {
             self.projects = JSONParser.parseProjects(data: data)!
+            self.bookmarks = self.projects.filter() {
+                if let bookmarked = ($0 as Project).isBookmarked {
+                    return bookmarked
+                } else { return false }
+            }
             DispatchQueue.main.async {
                 //self.projectsTableView.reloadData()
             }
