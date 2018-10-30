@@ -35,6 +35,10 @@ class ProjectViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        if #available(iOS 10, *) {
+            let feedback = UISelectionFeedbackGenerator.init()
+            feedback.selectionChanged()
+        }
         let nextScreen = IssueViewController()
         nextScreen.issue = issues[indexPath.row]
         nextScreen.title = issues[indexPath.row].eventID

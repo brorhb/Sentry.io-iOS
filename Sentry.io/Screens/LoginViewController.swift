@@ -11,8 +11,11 @@ import UIKit
 class LoginViewController: UIViewController {
 
     let red = UIColor(red:1.00, green:0.25, blue:0.21, alpha:1.0)
-    
-    let tokenInputField: UITextField = UITextField(frame: CGRect(x: 20, y: 100, width: 300, height: 40))
+    let tokenInputField: UITextField = {
+        let field = UITextField()
+        field.frame = CGRect(x: 20, y: 100, width: 300, height: 40)
+        return field
+    }()
     let welcomeLabel: UILabel = UILabel()
     let errorLabel: UILabel = UILabel()
     let loginButton: UIButton = UIButton()
@@ -20,13 +23,20 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .white
-        
+        view.addSubview(tokenInputField)
+        view.addSubview(welcomeLabel)
+        view.addSubview(errorLabel)
+        view.addSubview(loginButton)
         setupWelcomeLabel()
         setupTokenInputField()
         setupLoginButton()
     }
     
     @objc func loginOnCLick () {
+        if #available(iOS 10, *) {
+            let feedback = UISelectionFeedbackGenerator.init()
+            feedback.selectionChanged()
+        }
         guard let token: String = tokenInputField.text else { return }
         UserDefaults.standard.set(token, forKey: "token")
         HTTPHandler.getProjectsJSON(token: token, completionHandler: validateUser)
@@ -48,15 +58,12 @@ class LoginViewController: UIViewController {
     // Setup UI functions
     func setupTokenInputField () {
         tokenInputField.placeholder = "enter token here"
-        
-        view.addSubview(tokenInputField)
         setupTokenInputFieldConstraints()
     }
     
     func setupWelcomeLabel () {
         welcomeLabel.text = "Welcome"
         welcomeLabel.font = welcomeLabel.font.withSize(30)
-        view.addSubview(welcomeLabel)
         setupWelcomeLabelConstraints()
     }
     
@@ -64,7 +71,6 @@ class LoginViewController: UIViewController {
         errorLabel.text = "Error with token"
         errorLabel.textColor = red
         errorLabel.font = welcomeLabel.font.withSize(20)
-        view.addSubview(errorLabel)
         setupErrorLabelConstraints()
     }
     
@@ -73,7 +79,6 @@ class LoginViewController: UIViewController {
         loginButton.setTitle("Login", for: .normal)
         loginButton.setTitleColor(.white, for: .normal)
         loginButton.addTarget(self, action: #selector(loginOnCLick), for: .touchUpInside)
-        view.addSubview(loginButton)
         setupLoginButtonConstraints()
     }
     

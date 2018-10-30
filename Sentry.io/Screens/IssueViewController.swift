@@ -22,10 +22,11 @@ class IssueViewController: UITableViewController {
         didSet {
             guard let issueItem = issue else { return }
             if let contexts = issueItem.contexts {
+                print(contexts)
                 if let browser = contexts.browser?.name {
                     browserName = "Browser name: \(browser)"
                 }
-                if let os = contexts.os?.type {
+                if let os = contexts.os?.name {
                     osName = "OS name: \(os)"
                 }
             }

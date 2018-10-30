@@ -31,6 +31,10 @@ class ProjectsViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        if #available(iOS 10, *) {
+            let feedback = UISelectionFeedbackGenerator.init()
+            feedback.selectionChanged()
+        }
         let nextScreen = ProjectViewController()
         nextScreen.name = projects[indexPath.row].name
         nextScreen.id = projects[indexPath.row].id
