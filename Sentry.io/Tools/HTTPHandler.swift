@@ -11,9 +11,8 @@ import Foundation
 class HTTPHandler {
     
     static func getProjectsJSON (token: String, completionHandler: @escaping (Data?) -> (Void)) {
-        let tokenHard: String = "7abacc37e56245a9a58dcd62cb4aa2450b304d845e3240d9b53128d18ecf5773"
         let url = URL(string: "https://sentry.io/api/0/projects/")
-        let auth: String = "Bearer \(tokenHard)"
+        let auth: String = "Bearer \(token)"
         
         let config = URLSessionConfiguration.default
         config.httpAdditionalHeaders = ["Authorization": auth]
@@ -38,9 +37,8 @@ class HTTPHandler {
     }
     
     static func getIssuesJSON (token: String, orgSlug: String, projectSlug: String, completionHandler: @escaping (Data?) -> (Void)) {
-        let tokenHard: String = "7abacc37e56245a9a58dcd62cb4aa2450b304d845e3240d9b53128d18ecf5773"
         let url = URL(string: "https://sentry.io/api/0/projects/\(orgSlug)/\(projectSlug)/events/")
-        let auth: String = "Bearer \(tokenHard)"
+        let auth: String = "Bearer \(token)"
         let config = URLSessionConfiguration.default
         config.httpAdditionalHeaders = ["Authorization": auth]
         

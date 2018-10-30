@@ -35,7 +35,7 @@ class ProjectViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let nextScreen = IssueViewController(collectionViewLayout: UICollectionViewFlowLayout())
+        let nextScreen = IssueViewController()
         nextScreen.issue = issues[indexPath.row]
         nextScreen.title = issues[indexPath.row].eventID
         navigationController?.pushViewController(nextScreen, animated: true)
