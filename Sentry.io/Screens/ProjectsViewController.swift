@@ -18,11 +18,7 @@ class ProjectsViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if section == 0 {
-            return projects.filter() {
-                if let bookmarked = ($0 as Project).isBookmarked {
-                    return bookmarked
-                } else { return false }
-            }.count
+            return bookmarks.count
         }
         return projects.count
     }
